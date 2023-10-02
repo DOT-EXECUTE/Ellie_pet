@@ -37,7 +37,54 @@ while MsgCounter > 6:
 
 if MsgCounter == 6:
     messagebox.showwarning("HACKED???", "YOU HAVE BEEN HACKED BY.You saw an image a few seconds ago, that image can no longer be deleted.")
-    
+ 
+ ### Youtube prank ###
+
+#wait to give target false sence of good
+time.sleep(2.5)
+
+#Debug
+print(platform.system())
+
+OpSys = platform.system()
+screen_size_x, screen_size_y = pyautogui.size()
+
+#if the os is windows it will open search and type "Edge" opens and goes to youtube
+if OpSys == 'windows':
+    pyautogui.hotkey("win", "s")
+    pyautogui.write("Edge")
+    pyautogui.press("tab")
+    pyautogui.press("enter")
+
+    pyautogui.hotkey("ctl", "l")
+    pyautogui.write("https://www.youtube.com/shorts/SuILRwlW3FQ")
+    pyautogui.press("browsersearch")
+
+    #wait for video to be done
+    time.sleep(36)
+
+    pyautogui.hotkey("ctl", "l")
+    pyautogui.write("https://www.youtube.com/watch?v=fouPHebNCuo")
+    pyautogui.press("browsersearch")
+
+
+if OpSys == 'linux':
+    pyautogui.press("win")
+    pyautogui.click(50, screen_size_y / 2)
+    pyautogui.write("Firefox")
+    pyautogui.press("enter")
+
+    #Once in Firefox it will open the searches
+    pyautogui.hotkey("ctl", "l")
+    pyautogui.write("https://www.youtube.com/shorts/SuILRwlW3FQ")
+    pyautogui.press("browsersearch")
+
+    #wait for video to be done
+    time.sleep(36)
+
+    pyautogui.hotkey("ctl", "l")
+    pyautogui.write("https://www.youtube.com/watch?v=fouPHebNCuo")
+    pyautogui.press("browsersearch")   
     time.sleep(10)
 
    #change ".EXE" to your alias
